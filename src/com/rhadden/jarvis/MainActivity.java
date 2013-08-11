@@ -10,14 +10,12 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+	}
 
+	public void change(View v) {
 		final TextView welcome = (TextView) findViewById(R.id.welcome);
 		final Button speak = (Button) findViewById(R.id.speak);
 
-		speak.setOnClickListener(new TextView.OnClickListener() {
-			public void onClick(View v) {
-				welcome.setText("Mwahahaha.");
-			}
-		});
+		welcome.setText("Mwahahaha.");
 	}
 }
